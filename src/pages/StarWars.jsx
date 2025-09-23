@@ -1,19 +1,32 @@
 import { use, useEffect, useState } from "react"
 
 export const StarWars = () => {
-    const [nombrePersonajes, setNombresPersonaje] = useState([])
+    const [personajes, setNombresPersonaje] = useState([])
+    const [vehiculov] = useState([])
+    const [planetas, setPlanetas] = useState([])
     useEffect(() => {
-        getNombrePersonajes()
+        getpersonajes()
     },)
-    const getNombrePersonajes = async () => {
-        const result = await fetch("https://swapi.tech/api/people/?name")
-        const data = result.json()
-        setNombresPersonaje(data)
-
+    const getPersonajes = async () => {
+        const result = await fetch("https://swapi.tech/api/people")
+        const data = await result.json()
+        setNombresPersonaje(data.results)
 
     }
-    const personajes = nombrePersonajes.find(producto => producto.id > '0')
-    console.log(personajes)
+    const getVehiculos = async () => {
+        const result = await fetch("https://swapi.tech/api/vehiculos")
+        const data = await result.json()
+        setNombresPersonaje(data.results)
+
+    }
+
+        const getPlanetas = async () => {
+        const result = await fetch("https://swapi.tech/api/planetas")
+        const data = await result.json()
+        setNombresPersonaje(data.results)
+
+    }
+
 
     return (
         <div>
