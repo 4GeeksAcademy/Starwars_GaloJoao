@@ -1,0 +1,14 @@
+#added-favorite {
+    color: #ffa500;
+    display: none;
+}
+
+#favorite-regular.active {
+    background-color: #ffa500;
+    display: none;
+}
+
+#added-favorite.active {
+    color: #ffa500;
+    display: block;
+}
