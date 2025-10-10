@@ -1,5 +1,5 @@
 #added-favorite {
-    color: #ffa500;
+    color: #d10000;
     display: none;
 }
 
@@ -9,6 +9,6 @@
 }
 
 #added-favorite.active {
-    color: #ffa500;
     display: block;
+    color: #b90000;
 }
